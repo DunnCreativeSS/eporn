@@ -1,0 +1,38 @@
+<ion-popover-view ng-class="{'menuPopover':$root.user,'menuPopoverLog':!$root.user}">
+<ion-content>
+  <div class="list">
+    <!--<a class="item" href="#"  ng-click="showFilter()">
+      <i class="icon ion-stats-bars"></i>
+      Sort by trends
+    </a>-->
+    <a class="item" href="#"  ng-click="clearSearch()" ng-if="$root.$storage.tag">
+      <i class="icon ion-close-round"></i>
+      #{{$root.$storage.tag}}
+    </a>
+    <a class="item" href="#" ng-if="$root.$storage.view == 'compact'" ng-click="changeView('card')">
+    <i class="icon ion-navicon-round"></i>
+      {{'CARD_VIEW'|translate}}
+    </a>
+    <a class="item" href="#" ng-if="$root.$storage.view == 'card'" ng-click="changeView('compact')">
+    <i class="icon ion-navicon-round"></i>
+      {{'COMPACT_VIEW'|translate}}
+    </a>
+    <a class="item" href="#" ng-if="$root.$storage.theme == 'day'" ng-click="changeLight('night')">
+    <i class="icon ion-ios-lightbulb"></i>
+      {{'NIGHT_MODE'|translate}}
+    </a>
+    <a class="item" href="#" ng-if="$root.$storage.theme == 'night'" ng-click="changeLight('day')">
+    <i class="icon ion-ios-lightbulb-outline"></i>
+      {{'DAY_MODE'|translate}}
+    </a>
+    <a class="item" href="#"  ng-click="openSmodal()">
+      <i class="icon ion-android-search"></i>
+      {{'SEARCH'|translate}}
+    </a>
+    <a class="item" href="#" ng-if="$root.user" ng-click="openPostModal()">
+      <i class="icon ion-android-create"></i>
+      {{'SUBMIT_A_STORY'|translate}}
+    </a>
+  </div>
+</ion-content>
+</ion-popover-view>

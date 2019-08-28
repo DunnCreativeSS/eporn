@@ -1,0 +1,41 @@
+<ion-view view-cache="false" view-title="{{'MARKETPLACE' | translate}}">
+  <ion-content class="padding" ng-class="{'theme-dark':$root.$storage.theme == 'night'}">
+    <h4>{{'EXTERNAL_APPS'|translate}}</h4>
+    <div class="row">
+      <div class="col" ng-click="requestApp('SteemMonitor')">
+        <center>
+          <img src="img/logo_steemmonitor.png" alt="Steem Monitor" style="width: 100%;">
+          <b>Steem Monitor</b>
+          <p class="gray">{{'BY'|translate}} <a href="#app/profile/good-karma">Feruz</a></p>
+        </center>
+      </div>
+      <div class="col" ng-click="requestApp('SteemFest')">
+        <center>
+          <img src="img/logo_steemfest.png" alt="Steem Fest" style="width: 100%;">
+          <b>Steem Fest</b>
+          <p class="gray">{{'BY'|translate}} <a href="#app/profile/good-karma">Feruz</a>, <a href="#app/profile/roelandp">Roeland</a> &amp; <a href="#app/profile/cass">Cass</a></p>
+        </center>
+      </div>
+    </div><br/>
+    <h4>{{'PLUGINS'|translate}}</h4>
+    <div class="row">
+      <div class="col italic">
+        <center>
+          {{'COMING_SOON'|translate}}...
+        </center>
+      </div>
+    </div>
+    <br/>
+    <h4>{{'SUGGEST'|translate}}</h4><br/>
+    <div class="row">
+      <div class="col" ng-click="requestApp('New')">
+        <center>
+          <img src="img/plus.png" alt="Suggest New" style="width: 100%;">
+          <b>{{'NEW'|translate}}</b>
+        </center>
+      </div>
+      <div class="col">
+      </div>
+    </div><br/>
+  </ion-content>
+</ion-view>
